@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABES Engineering College ID Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="id-card-container">
+            <div class="id-card">
+                <div class="card-top">
+                    <div class="college-logo"></div>
+                </div>
+                
+                <div class="photo-section">
+                    <div class="photo" id="student-photo"></div>
+                </div>
+                
+                <h2 class="student-name" id="display-name">STUDENT NAME</h2>
+                <p class="course" id="display-course">COURSE</p>
+                
+                <div class="details">
+                    <div class="detail-row">
+                        <span class="label">ADMISSION NO. :</span>
+                        <span class="value" id="display-admno">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">DOB</span>
+                        <span class="value" id="display-dob">:-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">BLOOD GROUP</span>
+                        <span class="value" id="display-blood">:-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">HOSTEL</span>
+                        <span class="value" id="display-hostel">:-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">VALID TILL</span>
+                        <span class="value" id="display-valid">:-</span>
+                    </div>
+                </div>
+                
+                <div class="barcode" id="barcode"></div>
+                
+                <div class="signature">
+                    <p>Registrar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h2>Enter Student Details</h2>
+            <form id="student-form">
+                <div class="form-group">
+                    <label for="student-name">Full Name:</label>
+                    <input type="text" id="student-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="student-course">Course:</label>
+                    <input type="text" id="student-course" required>
+                </div>
+                <div class="form-group">
+                    <label for="admission-no">Admission No.:</label>
+                    <input type="text" id="admission-no" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="blood-group">Blood Group:</label>
+                    <select id="blood-group" required>
+                        <option value="">Select</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="hostel">Hostel:</label>
+                    <select id="hostel" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No" selected>No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="valid-till">Valid Till:</label>
+                    <input type="date" id="valid-till" required>
+                </div>
+                <div class="form-group">
+                    <label for="student-photo-upload">Upload Photo:</label>
+                    <input type="file" id="student-photo-upload" accept="image/*">
+                </div>
+                <button type="submit">Generate ID Card</button>
+                <button type="button" id="print-btn">Print ID Card</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

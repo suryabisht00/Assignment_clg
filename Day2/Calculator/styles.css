@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Calculator Section */
+.calculator {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    margin: 40px auto;
+}
+
+/* Removing the hover transform effect */
+.calculator:hover {
+    transform: none;
+}
+
+.calculator-form {
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.display-container {
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.operation-display {
+    width: 100%;
+    height: 30px;
+    padding: 5px 20px;
+    color: #888;
+    font-size: 0.9em;
+    text-align: right;
+    background-color: #f1f1f1;
+}
+
+.display {
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 2em;
+    text-align: right;
+    cursor: default;
+    transition: 0.3s;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+.key {
+    position: relative;
+    width: 100%;
+    height: 65px;
+    background-color: #f9f9f9;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.key:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.key:active, .key.active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.operator {
+    background-color: #e9e9e9;
+    color: #666;
+}
+
+.clear {
+    background-color: #ffebee;
+    color: #e57373;
+}
+
+.equals {
+    grid-column: span 2;
+    background-color: #e8f5e9;
+    color: #66bb6a;
+}
+
+.animate {
+    animation: pulse 0.3s;
+}
+
+.animate-result {
+    animation: flash 0.5s;
+}
+
+.animate-clear {
+    animation: fade 0.3s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.98); }
+    100% { transform: scale(1); }
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+.social-links a:nth-child(1):hover {
+    color: #1DA1F2; /* Twitter color */
+}
+
+.social-links a:nth-child(2):hover {
+    color: #E1306C; /* Instagram color */
+}
+
+.social-links a:nth-child(3):hover {
+    color: #6e5494; /* GitHub color */
+}
+
+.social-links a:nth-child(4):hover {
+    color: #0077B5; /* LinkedIn color */
+}
+
+.social-links a:nth-child(5):hover {
+    color: #4267B2; /* Facebook color */
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 1200px) {
+    .calculator {
+        max-width: 600px;
+    }
+    
+    .key {
+        height: 75px;
+        font-size: 1.4em;
+    }
+    
+    .display {
+        height: 90px;
+        font-size: 2.5em;
+    }
+    
+    .operation-display {
+        height: 40px;
+        font-size: 1.1em;
+    }
+    
+    .header h1 {
+        font-size: 3rem;
+    }
+    
+    .header p {
+        font-size: 1.2rem;
+    }
+    
+    .social-links a {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator {
+        max-width: 450px;
+        padding: 15px;
+    }
+    
+    .calculator-form {
+        padding: 15px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .header p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .calculator {
+        max-width: 100%;
+        padding: 10px;
+        border-radius: 0;
+    }
+    
+    .calculator-form {
+        padding: 15px 10px;
+    }
+    
+    .keypad {
+        grid-gap: 10px;
+    }
+    
+    .key {
+        height: 55px;
+        font-size: 1.1em;
+    }
+    
+    .header {
+        padding: 15px 0;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .social-links {
+        gap: 15px;
+    }
+    
+    .social-links a {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .calculator-form {
+        padding: 10px;
+    }
+    
+    .display {
+        height: 60px;
+        padding: 10px;
+        font-size: 1.8em;
+    }
+    
+    .operation-display {
+        height: 25px;
+        font-size: 0.8em;
+    }
+    
+    .keypad {
+        grid-gap: 8px;
+    }
+    
+    .key {
+        height: 50px;
+        font-size: 1em;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .header p {
+        font-size: 0.8rem;
+    }
+    
+    .social-links {
+        gap: 10px;
+    }
+    
+    .social-links a {
+        font-size: 1.2rem;
+    }
+}

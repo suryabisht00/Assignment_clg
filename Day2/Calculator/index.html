@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1>Minimal Calculator</h1>
+            <p>A clean, responsive calculator for your everyday needs</p>
+        </div>
+    </header>
+
+    <div class="calculator">
+        <div class="calculator-form">
+            <div class="display-container">
+                <div class="operation-display" id="operation-display"></div>
+                <input type="text" class="display" id="display" readonly>
+            </div>
+            <div class="keypad">
+                <button class="key clear" id="clear">C</button>
+                <button class="key operator" id="backspace">⌫</button>
+                <button class="key operator" id="percent">%</button>
+                <button class="key operator" id="divide">÷</button>
+                
+                <button class="key" id="seven">7</button>
+                <button class="key" id="eight">8</button>
+                <button class="key" id="nine">9</button>
+                <button class="key operator" id="multiply">×</button>
+                
+                <button class="key" id="four">4</button>
+                <button class="key" id="five">5</button>
+                <button class="key" id="six">6</button>
+                <button class="key operator" id="subtract">-</button>
+                
+                <button class="key" id="one">1</button>
+                <button class="key" id="two">2</button>
+                <button class="key" id="three">3</button>
+                <button class="key operator" id="add">+</button>
+                
+                <button class="key" id="zero">0</button>
+                <button class="key" id="decimal">.</button>
+                <button class="key equals" id="equals">=</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Created by Surya Bisht</p>
+            <div class="social-links">
+                <a href="https://twitter.com/suryabisht00" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/suryabisht00" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/suryabisht00" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/suryabisht00" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://facebook.com/suryabisht00" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
