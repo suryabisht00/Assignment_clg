@@ -8,64 +8,63 @@
 </head>
 <body>
     <div class="container">
+        <!-- ID Card Section -->
         <div class="id-card-container">
             <div class="id-card">
                 <div class="card-top">
                     <div class="college-logo"></div>
                 </div>
-                
                 <div class="photo-section">
                     <div class="photo" id="student-photo"></div>
                 </div>
-                
                 <h2 class="student-name" id="display-name">STUDENT NAME</h2>
                 <p class="course" id="display-course">COURSE</p>
-                
                 <div class="details">
                     <div class="detail-row">
                         <span class="label">ADMISSION NO. :</span>
                         <span class="value" id="display-admno">-</span>
                     </div>
                     <div class="detail-row">
-                        <span class="label">DOB</span>
-                        <span class="value" id="display-dob">:-</span>
+                        <span class="label">DOB :</span>
+                        <span class="value" id="display-dob">-</span>
                     </div>
                     <div class="detail-row">
-                        <span class="label">BLOOD GROUP</span>
-                        <span class="value" id="display-blood">:-</span>
+                        <span class="label">BLOOD GROUP :</span>
+                        <span class="value" id="display-blood">-</span>
                     </div>
                     <div class="detail-row">
-                        <span class="label">HOSTEL</span>
-                        <span class="value" id="display-hostel">:-</span>
+                        <span class="label">HOSTEL :</span>
+                        <span class="value" id="display-hostel">-</span>
                     </div>
                     <div class="detail-row">
-                        <span class="label">VALID TILL</span>
-                        <span class="value" id="display-valid">:-</span>
+                        <span class="label">VALID TILL :</span>
+                        <span class="value" id="display-valid">-</span>
                     </div>
                 </div>
-                
-                <div class="barcode" id="barcode"></div>
-                
+                <div class="barcode-section">
+                    <svg id="barcode"></svg>
+                </div>
                 <div class="signature">
                     <p>Registrar</p>
                 </div>
             </div>
         </div>
 
+        <!-- Form Section -->
         <div class="form-container">
             <h2>Enter Student Details</h2>
             <form id="student-form">
                 <div class="form-group">
                     <label for="student-name">Full Name:</label>
-                    <input type="text" id="student-name" required>
+                    <input type="text" id="student-name" placeholder="Enter full name" required>
                 </div>
                 <div class="form-group">
                     <label for="student-course">Course:</label>
-                    <input type="text" id="student-course" required>
+                    <input type="text" id="student-course" placeholder="Enter course" required>
                 </div>
                 <div class="form-group">
                     <label for="admission-no">Admission No.:</label>
-                    <input type="text" id="admission-no" required>
+                    <input type="text" id="admission-no" placeholder="Enter admission number" required>
                 </div>
                 <div class="form-group">
                     <label for="dob">Date of Birth:</label>
@@ -100,13 +99,16 @@
                     <label for="student-photo-upload">Upload Photo:</label>
                     <input type="file" id="student-photo-upload" accept="image/*">
                 </div>
-                <button type="submit">Generate ID Card</button>
-                <button type="button" id="print-btn">Print ID Card</button>
+                <div class="button-group">
+                    <button type="button" id="download-btn">Download ID Card</button>
+                    <button type="button" id="reset-btn">Reset Form</button>
+                </div>
             </form>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <script src="print.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
